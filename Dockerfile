@@ -18,12 +18,9 @@ RUN \
     apt-get update && \
     apt-get install --assume-yes --no-install-recommends apt-utils && \
     apt-get install --assume-yes --no-install-recommends \
-        apt-transport-https \
         ca-certificates \
-        curl \
-        software-properties-common
+        curl && \
 
-RUN \
     # Download, verify, and install s6 overlay
     curl \
         --silent --show-error \
