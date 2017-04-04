@@ -1,7 +1,9 @@
 FROM ubuntu:16.04
 MAINTAINER Nick Anderegg <git@anderegg.io>
 
-ARG OVERLAY_URL="https://github.com/just-containers/s6-overlay/releases/download/v1.18.1.5/s6-overlay-amd64.tar.gz"
+ARG OVERLAY_VERSION="v1.19.1.1"
+ARG OVERLAY_ARCHITECTURE="amd64"
+ARG OVERLAY_URL="https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-${OVERLAY_ARCHITECTURE}.tar.gz"
 ARG DEBIAN_FRONTEND="noninteractive"
 
 ENV TERM="xterm" \
